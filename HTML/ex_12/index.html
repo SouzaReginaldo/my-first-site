@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create User</title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded">
+          <form>
+            <fieldset>    
+                <legend>User Form</legend>
+                <br>
+                <label for="username">Username</label>
+                <input type="input-type" name="username" placeholder="username" maxlength="12" size="30"/>
+                <label for="Password">Password</label>
+                <input type="password" name="password" placeholder="password" maxlength="8" size="30"/>
+                <br><br>
+            </fieldset>
+          </form>
+          <!-- <RADIO BUTTON -->
+            <br><br>
+          <form>
+            Select your favourite superhero:
+            <input type="radio" name="Superman" value="true"  >Superman
+            <input type="radio" name="Batman" value="true" checked="checked"   >Batman
+            <input type="radio" name="Wonder Woman" value="true" checked="checked"   >Wonder Woman
+            <input type="radio" name="Flash" value="true"   >Flash
+            <input type="radio" name="Thor" value="true"   >Thor
+            <input type="radio" name="Hulk" value="true"   >Hulk
+          </form>
+          <br><br>
+          <!-- <CHECKBOX BUTTON -->
+          <form>
+            Select your favourite video game
+            <input type="checkbox" name="wizards" value="Fifa" checked="checked" > Fifa
+            <input type="checkbox" name="wizards" value="NHL"> NHL
+            <input type="checkbox" name="wizards" value="Residen Evil"> Residen Evil
+            <input type="checkbox" name="wizards" value="Uncharted" checked="checked"> Uncharted
+          </form>
+          <!-- <HIDDEN INPUT -->
+          <form>
+            <input type="hidden" name="userid" value="2300" >
+          </form>
+          <form>  
+            <input type="image" name="login" src="img/register_button.png" width="300" height="170">
+          </form>
+        </form>
+    </body>
+</html>

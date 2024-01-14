@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Create User</title>
+    </head>
+    <body>
+        <h1>Create User</h1>
+        <hr>
+        <form action="create_user.html" method="get" enctype="application/x-www-form-urlencoded">
+          <form>
+            <fieldset>    
+                <legend>User Form</legend>
+                <br>
+                <label for="username">Username</label>
+                <input type="text" name="username" placeholder="Use apenas letras minusculas" maxlength="12" size="30" required pattern="[a-z]"/>
+                <br><br>
+                <label for="password">Password</label>
+                <input type="password" name="password" placeholder="Use somente numeros" maxlength="8" size="30" required pattern=""[0-9]/>
+                <br><br>
+                <label for="ate_of_birth">Date of Birth</label>
+                <input type="date_of_birth" name="start" placeholder="aaaa-mm-dd" min="1920-01-01" max="2022-12-31" />
+                <br><br>
+                <label for="email">Email</label>
+                <input type="email" name="email" placeholder="email@email.com" size="30" required/>
+                <br><br>
+                <label for="url">Site URL</label>
+                <input type="url" name="url" placeholder="Site URL" size="30" />
+                <br><br>
+                <input type="button" name="subimt" value="Submit" />
+                <br><br>
+            </fieldset>
+          </form>
+          <section>
+            <h1>Create User</h1>
+            <hr>
+            <iframe src="form.html" height="500" width="600" seamless frameborder="0"></iframe>
+          </section>
