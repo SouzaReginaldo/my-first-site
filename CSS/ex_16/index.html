@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Learning CSS</title>
+    <style type="text/css">
+        ul{
+            margin: 20px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+
+        ol{
+            margin: 20px 0px 0px 0px;
+            padding: 0px 0px 0px 0px;
+        }
+        
+        li{
+            list-style-position: inside;
+        }
+
+        ol{
+            list-style: decimal-leading-zero;
+        }
+
+        ul{
+            list-style: square;
+        }
+
+        .decorated{
+            list-style-image: url("../ex_16/snow.png");
+            font-size: 30px;
+        }
+
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+
+    <ol>
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ol>
+
+    <ul class="decorated">
+      <li>item 1</li>
+      <li>item 2</li>
+      <li>item 3</li>
+      <li>item 4</li>
+      <li>item 5</li>
+    </ul>
+  </body>
+</html>

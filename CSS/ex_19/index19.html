@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Learning CSS</title>
+  <style type="text/css">
+    
+    body{
+      margin: none;
+      padding: none;
+    }
+
+    form{
+      background-color: #eee;
+      padding: 10px 5px 10px 5px;
+      text-align: right;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .text{
+      display: inline-block;
+      padding: 10px 10px 10px 10px;
+      border-radius: 5px 5px 5px 5px;
+      margin-right: 5px;
+      outline: none; 
+    }
+
+    .text, .password, button{
+      border: 1px solid #EC576B;
+      box-shadow: 0 6px 6px -6px #777;
+    } 
+
+    button{
+      background-color: #EC576B;
+      color: white;
+      margin-right: 0px;
+    }
+
+    button:hover{
+      background-color: rgb(240, 50, 76);
+      color: white;
+      cursor: pointer;
+    }
+
+
+  </style>
+
+</head>
+<body>
+  <form>
+      <input type="text" name="username" placeholder="Username">
+      <input type="password" name="password" placeholder="Password">
+      <button type='submit'>Submit</button>
+  </form>
+</body>
+</html>

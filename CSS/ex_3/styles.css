@@ -1,0 +1,19 @@
+/* All main title elements must be red */
+title {
+    color: red;
+  }
+
+  /* All paragraph elements must be gray */
+  p {
+    color: gray;
+  }
+
+  /* All links must be yellow */
+  a {
+    color: yellow;
+  }
+
+  /* All links must be pink to INDEX.HTML */
+  div {
+    color: pink;
+  }
