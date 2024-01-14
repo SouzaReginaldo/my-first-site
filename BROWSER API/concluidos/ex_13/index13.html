@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+</head>
+<body>
+
+    <h1>Bem-vindo ao nosso site!</h1>
+
+    <script>
+       
+        var segundosDesejados = prompt("Por favor, insira a quantidade de segundos que você gostaria de permanecer no site:");
+
+        var segundosTotais = parseInt(segundosDesejados);
+
+        var interval = setInterval(function() {
+            if (segundosTotais > 0) {
+                console.log(segundosTotais + ' segundos restantes...');
+                segundosTotais--;
+            } else {
+                alert('Sua sessão expirou. Volte em breve!');
+                clearInterval(interval); 
+            }
+        }, 1000); 
+    </script>
+
+</body>
+</html>

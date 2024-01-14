@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <body>
+    <script>
+      var bodyElement = document.body;
+
+      var h1Element = document.createElement('h1');
+      h1Element.textContent = 'Create Dynamic content!!!';
+
+      var pElement = document.createElement('p');
+      pElement.textContent = 'This elements were created using JavaScript';
+
+      bodyElement.appendChild(h1Element);
+
+      bodyElement.appendChild(pElement);
+    </script>
+  </body>
+</html>

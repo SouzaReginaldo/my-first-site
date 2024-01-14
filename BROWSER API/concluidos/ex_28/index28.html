@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <body>
+    <script>
+      var bodyElement = document.body;
+
+      var nomes = [];
+
+      // Função para atualizar a lista e estilizar conforme o número de itens
+      function atualizarLista() {
+        // Removendo a lista existente (se houver)
+        var listaExistente = document.getElementById("lista-nomes");
+        if (listaExistente) {
+          bodyElement.removeChild(listaExistente);
+        }
+
+        var ulElement = document.createElement("ul");
+        ulElement.id = "lista-nomes";
+
+        nomes.forEach(function (nome, index) {
+          var liElement = document.createElement("li");
+          liElement.textContent = nome;
+
+          liElement.style.color = index % 2 === 0 ? "#ddd" : "#eee";
+
+          ulElement.appendChild(liElement);
+        });
+
+        bodyElement.appendChild(ulElement);
+      }
+
+      while (true) {
+        var novoNome = prompt("Digite um nome (ou clique em Cancelar para encerrar):");
+
+        if (novoNome === null) {
+          break;
+        }
+
+        nomes.push(novoNome);
+
+        atualizarLista();
+      }
+    </script>
+  </body>
+</html>

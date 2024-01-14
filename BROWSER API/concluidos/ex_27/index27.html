@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+  </head>
+  <body>
+    <script>
+      var bodyElement = document.body;
+
+      var numbersArray = [];
+      for (var i = 1; i <= 100; i++) {
+        numbersArray.push(i);
+      }
+
+      var ulElement = document.createElement("ul");
+
+      numbersArray.forEach(function (number) {
+        var liElement = document.createElement("li");
+
+        liElement.textContent = "Item " + number;
+
+        liElement.style.color = number % 2 === 0 ? "#ddd" : "#eee";
+
+        ulElement.appendChild(liElement);
+      });
+
+      bodyElement.appendChild(ulElement);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body>
+
+  <button id="firstButton">Click Me!!</button>
+  <button id="secondButton">Remove event listener</button>
+  <a href="https://www.aircanada.com/ca/en/aco/home.html">Link with JavaScript handler</a>
+
+  <script>
+    var firstButton = document.querySelector('#firstButton');
+
+    firstButton.addEventListener('click', function() {
+      alert('You clicked an event listened element');
+    });
+
+    firstButton.addEventListener('mouseover', function() {
+      console.log('Mouse over the button! Use your imagination!');
+    });
+
+    var secondButton = document.querySelector('#secondButton');
+
+    secondButton.addEventListener('click', function() {
+      firstButton.removeEventListener('click', clickHandler);
+      alert('Event listener removed from the first button');
+    });
+
+    function clickHandler() {
+      alert('You clicked an event listened element');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>It's all JavaScript Baby!!</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        var bodyElement = document.body;
+
+        var nomes = ["Nome1", "Nome2", "Nome3", "Nome4", "Nome5", "Nome6", "Nome7", "Nome8", "Nome9", "Nome10"];
+
+        var ulElement = document.createElement("ul");
+
+        nomes.forEach(function(nome) {
+          var liElement = document.createElement("li");
+
+          liElement.textContent = nome;
+
+          ulElement.appendChild(liElement);
+        });
+
+        bodyElement.appendChild(ulElement);
+      });
+    </script>
+  </head>
+  <body>
+    <!-- O conteúdo será adicionado dinamicamente com JavaScript -->
+  </body>
+</html>

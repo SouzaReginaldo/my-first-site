@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setting attributes</title>
+  <style>
+    .bold {
+      font-weight: bold;
+    }
+    
+    .striked {
+      text-decoration: line-through;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="main">Playing with attributes</h1>
+  <div name="divy">We have more control over our documents as we learn about JavaScript and DOM elements!!!</div>
+
+  <script>
+    var h1Element = document.getElementById('main');
+
+    var divElement = document.querySelector('div');
+
+    if (h1Element.hasAttributes()) {
+      h1Element.classList.add('striked');
+    } else {
+      h1Element.classList.add('bold');
+    }
+
+    if (divElement.hasAttributes()) {
+      divElement.classList.add('striked');
+    } else {
+      divElement.classList.add('bold');
+    }
+
+    divElement.removeAttribute('name');
+  </script>
+</body>
+</html>

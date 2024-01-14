@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div id="outputDiv">Counter: 0</div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+
+    <script>
+      const firstButton = document.getElementById('firstButton');
+      const outputDiv = document.getElementById('outputDiv');
+      
+      let clickCounter = 0;
+
+      firstButton.ondblclick = function() {
+        clickCounter++;
+        outputDiv.textContent = `Counter: ${clickCounter}`;
+      };
+
+    </script>
+  </body>
+</html>

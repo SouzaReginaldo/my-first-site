@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form Properties</title>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+        var form = document.querySelector('form[name="login"]');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        var usernameValue = document.getElementById('username').value;
+        var passwordValue = document.getElementById('pass').value;
+
+        console.log('Username:', usernameValue);
+        console.log('Password:', passwordValue);
+      });
+    });
+  </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+  <div></div>
+</body>
+</html>

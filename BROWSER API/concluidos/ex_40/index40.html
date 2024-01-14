@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com" id="customLink">Link with JavaScript handler</a>
+
+    <script>
+      const customLink = document.getElementById('customLink');
+      let hoverCount = 0;
+
+      customLink.onmouseover = function() {
+        hoverCount++;
+
+        switch (hoverCount) {
+          case 1:
+            customLink.style.backgroundColor = 'red';
+            break;
+          case 2:
+            customLink.style.backgroundColor = 'blue';
+            break;
+          case 3:
+            customLink.style.backgroundColor = 'green';
+            break;
+          case 4:
+            customLink.style.backgroundColor = 'gray';
+            break;
+          default:
+            customLink.style.backgroundColor = 'white';
+            break;
+        }
+      };
+
+      customLink.onmouseout = function() {
+        const backgroundColor = customLink.style.backgroundColor;
+        alert(`The link background color is: ${backgroundColor}`);
+      };
+    </script>
+  </body>
+</html>

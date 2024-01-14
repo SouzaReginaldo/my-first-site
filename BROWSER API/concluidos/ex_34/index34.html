@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+
+    <script>
+      const firstButton = document.getElementById('firstButton');
+      const secondButton = document.getElementById('secondButton');
+
+      function greet() {
+        alert('You clicked an event listened element');
+      }
+
+      firstButton.addEventListener('click', greet);
+
+      secondButton.onclick = function() {
+        firstButton.removeEventListener('click', greet);
+        alert('Event listener removed from the first button');
+      };
+    </script>
+  </body>
+</html>

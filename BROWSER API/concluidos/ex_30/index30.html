@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+</head>
+<body>
+
+  <ul id="productList">
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Peach</li>
+    <li>Eggs</li>
+    <li>Tomato</li>
+    <li>Lettuce</li>
+    <li>Milk</li>
+  </ul>
+
+  <script>
+    var productList = document.getElementById('productList');
+
+    var items = productList.children;
+
+    // Iterando reversamente para remover cada item da lista
+    for (var i = items.length - 1; i >= 0; i--) {
+      var currentItem = items[i];
+      productList.removeChild(currentItem);
+    }
+  </script>
+
+</body>
+</html>

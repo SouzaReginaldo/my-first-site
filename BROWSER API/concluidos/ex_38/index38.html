@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Events</title>
+  </head>
+  <body>
+    <div id="outputDiv"></div>
+    <button id="firstButton">Click Me!!</button>
+    <button id="secondButton">Remove event listener</button>
+    <a href="https://google.com">Link with JavaScript handler</a>
+
+    <script>
+      const divElement = document.querySelector('div');
+
+      function keyPressHandler(event) {
+        const pressedKey = String.fromCharCode(event.charCode);
+        const charCode = event.charCode;
+
+        divElement.textContent = `You pressed the ${pressedKey} key with the ${charCode} code`;
+      }
+
+      document.body.addEventListener('keypress', keyPressHandler);
+    </script>
+
+    <style>
+      #outputDiv {
+        font-size: 20px;
+        color: red;
+        font-family: Arial, sans-serif;
+        padding-bottom: 20px;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 7</title>
+</head>
+<body>
+    <script>
+        alert('This program adds all the numbers you input');
+
+        var result = 0;
+
+        while (confirm('Do you want to enter another number?')) {
+            var userInput = prompt('Enter a number:');
+
+            result += parseFloat(userInput);
+
+            alert('The result so far is: ' + result);
+        }
+    </script>
+</body>
+</html>

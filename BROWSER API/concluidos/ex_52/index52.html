@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAPI Films</title>
+</head>
+<body>
+
+<div id="filmList"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const apiUrl = 'https://swapi.dev/api/films/';
+        const filmListContainer = document.getElementById('filmList');
+
+        // Use a função fetch para chamar a API
+        fetch(apiUrl)
+            .then(response => {
+                // Verificar se a resposta está OK
+                if (!response.ok) {
+                    throw new Error(`Erro ao chamar a API: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                // Converter a resposta do objeto string JSON em um objeto JavaScript
+                const films = data.results;
+
+                // Criar elementos HTML e exibir os valores para cada filme
+                films.forEach(film => {
+                    const filmElement = document.createElement('div');
+                    filmElement.innerHTML = `
+                        <h3>${film.title}</h3>
+                        <p>Episode ID: ${film.episode_id}</p>
+                        <p>Release Date: ${film.release_date}</p>
+                        <hr>
+                    `;
+                    filmListContainer.appendChild(filmElement);
+                });
+            })
+            .catch(error => {
+                console.error('Erro:', error.message);
+            });
+    });
+</script>
+
+</body>
+</html>

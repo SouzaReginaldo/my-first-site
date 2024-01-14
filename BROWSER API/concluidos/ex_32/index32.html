@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+</head>
+<body>
+
+  <div></div>
+  <button id="firstbutton">Click me!!</button>
+
+  <script>
+    var firstButton = document.getElementById('firstbutton');
+
+    // ------------------exemplo 1-----------------------------------
+    // Definindo a função que será chamada quando o botão for clicado
+    // function showAlert() {
+    //   alert("Oh.. Don't Click Me!!");
+    // }
+
+    // // Atribuindo a função diretamente à propriedade onclick
+    // firstButton.onclick = showAlert;
+
+    // ------------------exemplo 2-----------------------------------
+
+    // Ou, atribuindo a função a uma variável e depois à propriedade onclick
+    var showAlertFunction = function() {
+      alert("Oh.. Don't Click Me!!");
+    };
+    firstButton.onclick = showAlertFunction;
+  </script>
+
+</body>
+</html>

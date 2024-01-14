@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+    <style>
+        .riscado {
+            text-decoration: line-through;
+        }
+
+        ul {
+            list-style-type: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const weeklyChores = [
+            'Fazer exercícios',
+            'Estudar programação',
+            'Limpar a casa',
+            'Fazer compras',
+            'Ler um livro',
+            'Assistir a uma aula online',
+            'Cozinhar',
+            'Praticar um hobby',
+            'Organizar o espaço de trabalho',
+            'Concluir projetos pendentes'
+        ];
+
+        const ulElement = document.createElement('ul');
+
+        weeklyChores.forEach((chore) => {
+            const liElement = document.createElement('li');
+            liElement.textContent = chore;
+
+            liElement.addEventListener('click', function () {
+                liElement.classList.toggle('riscado');
+            });
+
+            ulElement.appendChild(liElement);
+        });
+
+        document.body.appendChild(ulElement);
+    </script>
+</body>
+</html>

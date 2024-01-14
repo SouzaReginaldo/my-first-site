@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise 47</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Selecionar o formulário pelo nome
+          var form = document.forms.login;
+    
+          // Adicionar um manipulador de eventos para o envio do formulário
+          form.addEventListener('submit', function(event) {
+            // Evitar o comportamento padrão de envio do formulário
+            event.preventDefault();
+    
+            // Selecionar todas as caixas de seleção de super-heróis
+            var checkboxes = form.elements.superheroe;
+    
+            // Filtrar as caixas de seleção marcadas
+            var selectedHeroes = Array.from(checkboxes).filter(function(checkbox) {
+              return checkbox.checked;
+            });
+    
+            // Verificar o número de super-heróis selecionados
+            if (selectedHeroes.length === 0) {
+              alert("Please at least select a superheroe");
+            } else if (selectedHeroes.length === 1) {
+              alert("The best superheroe is: " + selectedHeroes[0].value);
+            } else {
+              // Obter os nomes dos super-heróis selecionados
+              var listOfSuperheroesNames = selectedHeroes.map(function(checkbox) {
+                return checkbox.value;
+              }).join(', ');
+    
+              alert("The best superheores are: " + listOfSuperheroesNames);
+            }
+          });
+        });
+      </script>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login">
+
+    <input type="checkbox" name="superheroe" value="Wolverine"> Wolverine
+    <input type="checkbox" name="superheroe" value="The Invisible Woman"> The Invisible Woman
+    <input type="checkbox" name="superheroe" value="Iron Man"> Iron Man
+    <input type="checkbox" name="superheroe" value="Superman"> Superman
+    <input type="checkbox" name="superheroe" value=""> Daredevil
+    <input type="checkbox" name="superheroe" value="The Flash"> The Flash
+    <input type="checkbox" name="superheroe" value="Captain America"> Captain America
+    <input type="checkbox" name="superheroe" value="Wonder Woman"> Wonder Woman
+    <input type="checkbox" name="superheroe" value="Spider-Man"> Spider-Man
+    <input type="checkbox" name="superheroe" value="Batman"> Batman
+    <input type="submit" name="submit" value="Submit" />
+    
+  </form>
+</body>
+</html>

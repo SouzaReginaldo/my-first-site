@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+</head>
+<body>
+
+    <script>
+        var username = prompt('Digite seu nome de usuário:');
+
+        var password = prompt('Digite sua senha:');
+
+        alert('Welcome ' + username);
+
+        setTimeout(function() {
+            var confirmLogout = confirm('Do you still want to be logged?');
+            
+            if (confirmLogout) {
+                alert(username + ' your session has been restored');
+            } else {
+                alert(username + ' your session has expired');
+            }
+        }, 10000); // 10000 milissegundos ou 10 segundos
+    </script>
+
+</body>
+</html>

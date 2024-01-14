@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Form elements event</title>
+  <style>
+    .error { 
+      color: red; 
+      background-color: pink;
+      border: 1px solid red;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login" id="loginForm">
+    <input type="text" id="username" name="username" placeholder="Username (alphanumeric)" />
+    <input type="password" id="pass" name="pass" placeholder="Password (alphanumeric)" />
+    <input type="text" id="email" name="email" placeholder="Email" />
+    <input type="submit" name="submitBtn" value="Send" />
+  </form>
+  <div id="errors"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('loginForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        document.getElementById('errors').innerHTML = '';
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('pass').value;
+        var email = document.getElementById('email').value;
+        var usernameRegex = /^[a-zA-Z0-9]+$/;
+
+        if (username === '' || password === '' || email === '') {
+          document.getElementById('errors').innerHTML = '<p class="error">Please input a username, password, and email</p>';
+        } else if (!username.match(usernameRegex) || !password.match(usernameRegex)) {
+          document.getElementById('errors').innerHTML = '<p class="error">Username and password should contain only alphanumeric characters</p>';
+        } else if (!isValidEmail(email)) {
+          document.getElementById('errors').innerHTML = '<p class="error">Invalid email format</p>';
+        } else {
+          document.getElementById('loginForm').submit();
+        }
+      });
+
+      function isValidEmail(email) {
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+    });
+  </script>
+</body>
+</html>

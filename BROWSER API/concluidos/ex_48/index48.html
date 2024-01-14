@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Exercise 48</title>
+  <style>
+
+    input:focus {
+      box-shadow: 0 0 5px #3498db;
+    }
+  </style>
+</head>
+<body>
+  <form action="save_user.html" method="post" enctype="application/x-www-form-urlencoded" name="login" id="loginForm">
+    <input type="text" id="username" name="username" />
+    <input type="password" id="pass" name="pass" />
+    <input type="submit" name="submit" value="Send" />
+  </form>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      var form = document.getElementById('loginForm');
+
+      form.addEventListener('focus', function(event) {
+
+        if (event.target.tagName === 'INPUT') {
+
+          event.target.style.boxShadow = '0 0 5px #3498db';
+        }
+      }, true);
+
+      form.addEventListener('blur', function(event) {
+        if (event.target.tagName === 'INPUT') {
+
+          event.target.style.boxShadow = '';
+        }
+      }, true);
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        var usernameValue = document.getElementById('username').value;
+        var passValue = document.getElementById('pass').value;
+
+        alert('Username: ' + usernameValue + '\nPassword: ' + passValue);
+      });
+    });
+  </script>
+</body>
+</html>

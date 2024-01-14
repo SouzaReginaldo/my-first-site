@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+</head>
+<body>
+
+  <ul id="productList">
+    <li>Banana</li>
+    <li>Apple</li>
+    <li>Peach</li>
+    <li>Eggs</li>
+    <li>Tomato</li>
+    <li>Lettuce</li>
+    <li>Milk</li>
+  </ul>
+
+  <script>
+    var productList = document.getElementById('productList');
+
+    var banana = productList.children[0];
+    var apple = productList.children[1];
+    var peach = productList.children[2];
+    var eggs = productList.children[3];
+    var tomato = productList.children[4];
+    var lettuce = productList.children[5];
+    var milk = productList.children[6];
+
+    productList.removeChild(banana);
+    productList.removeChild(apple);
+    productList.removeChild(peach);
+    productList.removeChild(eggs);
+    // productList.removeChild(tomato);
+    // productList.removeChild(lettuce);
+    // productList.removeChild(milk);
+  </script>
+
+</body>
+</html>
