@@ -1,0 +1,10 @@
+const firstname; firstname = "Reginaldo";
+const lastname; lastname = "Campos de Souza";
+const age; age = "33";
+const dateOfBirth; dateOfBirth = "09/02/1991";
+const address; address = "108 Shawville Place SE";
+console.log("firstname: ", firstname);
+console.log("lastname: ", lastname);
+console.log("age: ", age);
+console.log("dateOfBirth: ", dateOfBirth);
+console.log("address: ", address);
