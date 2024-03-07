@@ -1,1 +1,1 @@
-# my-first-site
+# ComIT-NodeJS Course - First Learning
